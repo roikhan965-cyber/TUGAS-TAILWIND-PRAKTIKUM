@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Roikhan Ghalib — Personal Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#F1EDE3',
+            paper: '#FAF9F5',
+            charcoal: '#171A18',
+            sage: '#89947B',
+            bronze: '#B78B62',
+            muted: '#77796F'
+          },
+          fontFamily: {
+            sans: ['Inter', 'Arial', 'sans-serif'],
+            serif: ['Georgia', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .hero-pattern {
+      background-image: radial-gradient(#89947B 0.7px, transparent 0.7px);
+      background-size: 22px 22px;
+    }
+
+    ::selection {
+      background: #89947B;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-charcoal">
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="sticky top-0 z-50 bg-paper/95 backdrop-blur-md border-b border-charcoal/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <div class="h-20 flex items-center justify-between">
+
+        <!-- Logo -->
+        <a href="#home" class="text-xl font-bold tracking-tight">
+          ROIKHAN<span class="text-sage">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-10 text-sm">
+
+          <a href="#home" class="text-muted hover:text-sage transition">
+            Home
+          </a>
+
+          <a href="#about" class="text-muted hover:text-sage transition">
+            Tentang
+          </a>
+
+          <a href="#projects" class="text-muted hover:text-sage transition">
+            Proyek
+          </a>
+
+          <a href="#contact" class="text-muted hover:text-sage transition">
+            Kontak
+          </a>
+
+        </div>
+
+        <!-- Contact Button -->
+        <a href="#contact"
+          class="hidden md:inline-flex items-center gap-2 border border-charcoal px-5 py-2.5 text-sm hover:bg-charcoal hover:text-white transition">
+          Let's Talk <span>↗</span>
+        </a>
+
+        <!-- Mobile Button -->
+        <button id="menu-toggle"
+          class="md:hidden p-2 hover:bg-ivory rounded-lg focus:ring-2 focus:ring-sage"
+          aria-label="Buka menu"
+          aria-expanded="false">
+
+          <svg class="w-6 h-6" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="hidden md:hidden pb-5 border-t border-charcoal/10">
+
+        <a href="#home" class="block py-3 text-sm hover:text-sage">Home</a>
+        <a href="#about" class="block py-3 text-sm hover:text-sage">Tentang</a>
+        <a href="#projects" class="block py-3 text-sm hover:text-sage">Proyek</a>
+        <a href="#contact" class="block py-3 text-sm hover:text-sage">Kontak</a>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section id="home" class="bg-ivory overflow-hidden">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-20 md:py-28">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Hero Text -->
+        <div class="lg:col-span-7">
+
+          <div class="flex items-center gap-3 mb-8">
+            <span class="w-2 h-2 bg-sage rounded-full"></span>
+            <p class="text-xs tracking-[0.25em] uppercase text-muted">
+              Personal Portfolio / 2026
+            </p>
+          </div>
+
+          <h1 class="serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.08] tracking-tight mb-8">
+
+            Creating
+            <span class="italic text-sage">digital</span>
+            <br>
+
+            experiences
+            <br>
+
+            with purpose.
+
+          </h1>
+
+          <p class="max-w-lg text-muted leading-8 text-base md:text-lg mb-10">
+            Halo, saya Roikhan Ghalib Arrianto. Mahasiswa Sistem Informasi
+            yang memiliki ketertarikan pada dunia teknologi, desain,
+            dan pengembangan website.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+
+            <a href="#projects"
+              class="bg-charcoal text-white px-7 py-4 text-sm hover:bg-sage focus:ring-4 focus:ring-sage/30 active:scale-95 transition">
+              Explore My Work ↗
+            </a>
+
+            <a href="#about"
+              class="border border-charcoal/30 px-7 py-4 text-sm hover:bg-white focus:ring-4 focus:ring-sage/30 active:scale-95 transition">
+              About Me
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="lg:col-span-5 relative">
+
+          <div class="relative max-w-md mx-auto">
+
+            <div class="absolute inset-0 translate-x-5 translate-y-5 border border-sage"></div>
+
+            <div class="relative aspect-[4/5] bg-charcoal overflow-hidden flex items-center justify-center">
+
+              <div class="absolute inset-0 hero-pattern opacity-20"></div>
+
+              <div class="absolute w-64 h-64 border border-white/20 rounded-full"></div>
+              <div class="absolute w-48 h-48 border border-white/20 rounded-full"></div>
+
+              <div class="relative text-center">
+
+                <p class="text-sage text-xs tracking-[0.4em] mb-5">
+                  PERSONAL IDENTITY
+                </p>
+
+                <h2 class="serif text-8xl md:text-9xl text-ivory">
+                  RG<span class="text-sage">.</span>
+                </h2>
+
+                <p class="text-white/60 text-xs tracking-[0.3em] mt-6">
+                  ROIKHAN GHALIB ARRIANTO
+                </p>
+
+              </div>
+
+              <div class="absolute bottom-6 left-6 text-white/50 text-xs tracking-widest">
+                FIG. 01 — PROFILE
+              </div>
+
+              <div class="absolute top-6 right-6 text-sage text-2xl">
+                ✳
+              </div>
+
+            </div>
+
+          </div>
+
+          <p class="text-right text-xs text-muted mt-8 tracking-widest">
+            INFORMATION SYSTEMS STUDENT — INDONESIA
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="py-24 md:py-32 bg-paper">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <!-- Section Heading -->
+      <div class="flex items-center gap-4 mb-16">
+        <span class="text-sage text-sm">01 /</span>
+        <div class="h-px bg-charcoal/20 flex-1"></div>
+        <span class="text-xs tracking-[0.2em] text-muted uppercase">
+          About Me
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-14">
+
+        <!-- Biography -->
+        <div class="lg:col-span-7">
+
+          <p class="text-xs tracking-[0.25em] text-sage uppercase mb-6">
+            A little introduction
+          </p>
+
+          <h2 class="serif text-4xl md:text-6xl leading-tight mb-10">
+            Passionate about
+            <span class="italic text-sage">technology</span>
+            and creativity.
+          </h2>
+
+          <div class="space-y-6 text-muted leading-8 max-w-2xl">
+
+            <p>
+              Perkenalkan, saya Roikhan Ghalib Arrianto,
+              mahasiswa Program Studi Sistem Informasi.
+              Saya memiliki ketertarikan terhadap perkembangan
+              teknologi informasi, khususnya pengembangan website
+              dan desain antarmuka pengguna.
+            </p>
+
+            <p>
+              Selama menjalani perkuliahan, saya mempelajari
+              berbagai bidang seperti pemrograman web,
+              pengelolaan basis data, analisis sistem,
+              serta pengembangan perangkat lunak.
+            </p>
+
+            <p>
+              Bagi saya, teknologi bukan hanya tentang menulis kode,
+              tetapi juga tentang bagaimana menciptakan solusi
+              digital yang bermanfaat, menarik, dan mudah digunakan.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- Skills -->
+        <div class="lg:col-span-5 lg:pt-20">
+
+          <div class="bg-ivory p-8 md:p-10">
+
+            <p class="text-xs tracking-[0.2em] text-muted uppercase mb-8">
+              My Capabilities
+            </p>
+
+            <h3 class="serif text-3xl mb-8">
+              Skills & Tools
+            </h3>
+
+            <div class="flex flex-wrap gap-3">
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                HTML
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                CSS
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                JavaScript
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                Tailwind CSS
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                PHP
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                MySQL
+              </span>
+
+              <span class="border border-charcoal/20 px-5 py-3 text-sm hover:bg-charcoal hover:text-white transition">
+                Git
+              </span>
+
+            </div>
+
+            <div class="border-t border-charcoal/15 mt-10 pt-6">
+
+              <p class="text-xs text-muted tracking-widest uppercase mb-2">
+                Current Focus
+              </p>
+
+              <p class="text-sm font-medium">
+                Web Development & UI Design
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects" class="bg-ivory py-24 md:py-32">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+      <!-- Section Heading -->
+      <div class="flex items-center gap-4 mb-16">
+        <span class="text-sage text-sm">02 /</span>
+        <div class="h-px bg-charcoal/20 flex-1"></div>
+        <span class="text-xs tracking-[0.2em] text-muted uppercase">
+          Selected Projects
+        </span>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+
+        <div>
+          <p class="text-xs tracking-[0.25em] text-sage uppercase mb-5">
+            My Recent Works
+          </p>
+
+          <h2 class="serif text-5xl md:text-7xl">
+            Things I've <span class="italic">created.</span>
+          </h2>
+        </div>
+
+        <p class="text-muted max-w-sm leading-7">
+          Beberapa hasil eksplorasi dan pembelajaran
+          saya dalam bidang teknologi dan pengembangan sistem.
+        </p>
+
+      </div>
+
+      <!-- Project Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <article class="group">
+
+          <div class="aspect-[4/3] bg-[#D5DED0] overflow-hidden relative flex items-center justify-center">
+
+            <div class="absolute inset-5 border border-charcoal/15"></div>
+
+            <div class="text-center group-hover:scale-110 transition duration-500">
+              <span class="text-7xl">☕</span>
+              <p class="text-xs tracking-[0.3em] mt-5 text-charcoal/60">
+                LOCAL BUSINESS
+              </p>
+            </div>
+
+            <span class="absolute top-5 left-5 text-xs bg-paper px-3 py-2">
+              01
+            </span>
+
+          </div>
+
+          <div class="pt-6">
+
+            <div class="flex justify-between items-center text-xs text-muted mb-4">
+              <span>WEB DEVELOPMENT</span>
+              <span>2026</span>
+            </div>
+
+            <h3 class="serif text-2xl mb-3">
+              Website UMKM
+            </h3>
+
+            <p class="text-sm text-muted leading-7 mb-6">
+              Website promosi usaha lokal yang menampilkan
+              informasi bisnis, daftar menu, dan identitas usaha.
+            </p>
+
+            <a href="#contact"
+              class="inline-flex items-center gap-3 text-sm font-semibold border-b border-charcoal pb-2 hover:text-sage hover:border-sage transition">
+              Lihat Detail <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- Project 2 -->
+        <article class="group">
+
+          <div class="aspect-[4/3] bg-[#DCD5C9] overflow-hidden relative flex items-center justify-center">
+
+            <div class="absolute inset-5 border border-charcoal/15"></div>
+
+            <div class="text-center group-hover:scale-110 transition duration-500">
+              <span class="text-7xl">✳</span>
+              <p class="text-xs tracking-[0.3em] mt-5 text-charcoal/60">
+                PERSONAL BRANDING
+              </p>
+            </div>
+
+            <span class="absolute top-5 left-5 text-xs bg-paper px-3 py-2">
+              02
+            </span>
+
+          </div>
+
+          <div class="pt-6">
+
+            <div class="flex justify-between items-center text-xs text-muted mb-4">
+              <span>UI / WEB DESIGN</span>
+              <span>2026</span>
+            </div>
+
+            <h3 class="serif text-2xl mb-3">
+              Personal Portfolio
+            </h3>
+
+            <p class="text-sm text-muted leading-7 mb-6">
+              Website personal branding untuk menampilkan
+              profil, keahlian, dan karya secara profesional.
+            </p>
+
+            <a href="#contact"
+              class="inline-flex items-center gap-3 text-sm font-semibold border-b border-charcoal pb-2 hover:text-sage hover:border-sage transition">
+              Lihat Detail <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- Project 3 -->
+        <article class="group">
+
+          <div class="aspect-[4/3] bg-[#C9D3D0] overflow-hidden relative flex items-center justify-center">
+
+            <div class="absolute inset-5 border border-charcoal/15"></div>
+
+            <div class="text-center group-hover:scale-110 transition duration-500">
+              <span class="text-7xl">⌘</span>
+              <p class="text-xs tracking-[0.3em] mt-5 text-charcoal/60">
+                DATA MANAGEMENT
+              </p>
+            </div>
+
+            <span class="absolute top-5 left-5 text-xs bg-paper px-3 py-2">
+              03
+            </span>
+
+          </div>
+
+          <div class="pt-6">
+
+            <div class="flex justify-between items-center text-xs text-muted mb-4">
+              <span>DATABASE</span>
+              <span>2026</span>
+            </div>
+
+            <h3 class="serif text-2xl mb-3">
+              Database System
+            </h3>
+
+            <p class="text-sm text-muted leading-7 mb-6">
+              Perancangan dan pengelolaan basis data
+              menggunakan MySQL untuk menyimpan informasi.
+            </p>
+
+            <a href="#contact"
+              class="inline-flex items-center gap-3 text-sm font-semibold border-b border-charcoal pb-2 hover:text-sage hover:border-sage transition">
+              Lihat Detail <span>↗</span>
+            </a>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT / FOOTER ================= -->
+  <footer id="contact" class="bg-charcoal text-paper">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-10">
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+
+        <!-- Contact Information -->
+        <div class="md:col-span-5">
+
+          <p class="text-sage text-xs tracking-[0.3em] uppercase mb-6">
+            03 / Get In Touch
+          </p>
+
+          <h2 class="serif text-4xl md:text-6xl leading-tight mb-8">
+            Let's create
+            <span class="italic text-sage">something</span>
+            meaningful.
+          </h2>
+
+          <p class="text-white/50 text-sm leading-7 mb-8 max-w-sm">
+            Terima kasih telah mengunjungi portofolio saya.
+            Saya terbuka untuk belajar, berkolaborasi,
+            dan bertukar ide mengenai teknologi.
+          </p>
+
+          <a href="mailto:email@example.com"
+            class="inline-flex items-center gap-3 border-b border-sage pb-2 text-sm hover:text-sage transition">
+            email@example.com ↗
+          </a>
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="md:col-span-3 md:col-start-8">
+
+          <h3 class="text-sm font-semibold mb-7">
+            Navigation
+          </h3>
+
+          <ul class="space-y-5 text-sm text-white/50">
+
+            <li>
+              <a href="#home" class="hover:text-sage transition">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#about" class="hover:text-sage transition">
+                About Me
+              </a>
+            </li>
+
+            <li>
+              <a href="#projects" class="hover:text-sage transition">
+                Projects
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact" class="hover:text-sage transition">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="md:col-span-2">
+
+          <h3 class="text-sm font-semibold mb-7">
+            Social Media
+          </h3>
+
+          <ul class="space-y-5 text-sm text-white/50">
+
+            <li>
+              <a href="#" class="hover:text-sage transition">
+                Instagram ↗
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-sage transition">
+                LinkedIn ↗
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="hover:text-sage transition">
+                GitHub ↗
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between gap-4">
+
+        <p class="text-xs text-white/40">
+          © 2026 Roikhan Ghalib Arrianto. All rights reserved.
+        </p>
+
+        <p class="text-xs text-white/40 tracking-widest">
+          DESIGNED WITH PURPOSE.
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Toggle Mobile Menu
+    menuToggle.addEventListener('click', function () {
+
+      mobileMenu.classList.toggle('hidden');
+
+      const expanded =
+        menuToggle.getAttribute('aria-expanded') === 'true';
+
+      menuToggle.setAttribute(
+        'aria-expanded',
+        String(!expanded)
+      );
+
+    });
+
+    // Close menu after clicking navigation
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    mobileLinks.forEach(function (link) {
+
+      link.addEventListener('click', function () {
+
+        mobileMenu.classList.add('hidden');
+
+        menuToggle.setAttribute('aria-expanded', 'false');
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
